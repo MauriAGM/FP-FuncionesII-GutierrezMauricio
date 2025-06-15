@@ -1,5 +1,5 @@
 //Calculo de raices cuadraticas considera si son raices reales o complejas
-
+//Hubo error en el commit donde dice ejercicio 5, pero el ejercicio es el 4
 #include <iostream>
 #include <cmath>
 using namespace std;
@@ -34,5 +34,8 @@ int main () {
     } else {
         cout << "Las raices son complejas." << endl;
     }
+    cout << "=====================================" << endl;
+    cout << "Fin del programa." << endl;
+    
     return 0;
 }
