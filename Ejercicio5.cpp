@@ -39,8 +39,7 @@ int main() {
 
     if (sonReales) {
         if (raiz1 == raiz2) {
-            cout << "Las raices son reales e iguales." << endl;
-            cout << "Raiz doble: " << raiz1 << endl;
+            cout << "Las raices son reales e iguales. Raiz doble: " << raiz1 << endl;
         } else {
             cout << "Las raices son reales y diferentes." << endl;
             cout << "La primera raiz es: " << raiz1 << endl;
@@ -49,6 +48,9 @@ int main() {
     } else {
         cout << "Las raices son complejas." << endl;
     }
+
+    cout << endl;
+    cout << "Fin del programa." << endl;
 
     return 0;
 }
