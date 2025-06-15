@@ -6,14 +6,33 @@ using namespace std;
 
 int main () {
     double a,b,c,discriminante,raiz1,raiz2;
-    cout << "Ingrese los coeficientes a, b y c de la ecuacion cuadratica (ax^2 + bx + c = 0): ";
-    cin >> a >> b >> c;
+    cout << "=== CALCULO DE RAICES CUADRATICAS ===" << endl;
+    cout << "=====================================" << endl;
+    cout << "Ingrese el valor de a,coeficiente de x^2: ";
+    cin >> a;
+    if (a == 0) {
+        cout << "El coeficiente a no puede ser cero." << endl;
+        return 1; 
+    }
+    cout << "Ingrese el valor de b, coefiicente de x: ";
+    cin >> b;
+    cout << "Ingrese el valor de c, termino independiente: ";
+    cin >> c;
 
     discriminante = b*b - 4*a*c;
-    raiz1 = (-b + sqrt(discriminante)) / (2*a);
-    raiz2 = (-b - sqrt(discriminante)) / (2*a);
 
-    cout << "La primera raiz es: " << raiz1 << endl;
-    cout << "La segunda raiz es: " << raiz2 << endl;
+    if (discriminante > 0) {
+        raiz1 = (-b + sqrt(discriminante)) / (2*a);
+        raiz2 = (-b - sqrt(discriminante)) / (2*a);
+        cout << "Las raices son reales y diferentes " << endl;
+        cout << "La primera raiz es: " << raiz1 << endl;
+        cout << "La segunda raiz es: " << raiz2 << endl;
+    } else if (discriminante == 0) {
+        double raiz = -b / (2*a);
+        cout << "Las raices son reales e iguales " << endl;
+        cout << "Raiz doble: " << raiz << endl;
+    } else {
+        cout << "Las raices son complejas." << endl;
+    }
     return 0;
 }
